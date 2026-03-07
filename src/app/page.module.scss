@@ -1,0 +1,178 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.title {
+  margin: 0 0 40px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.errorContainer {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 0 24px;
+}
+
+.searchLoader {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.searchResults {
+  margin: 0 0 24px;
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+
+  strong {
+    color: #e31c25;
+  }
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+
+  p {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+.manualLoadMore {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.loadMoreButton {
+  padding: 14px 32px;
+  background-color: transparent;
+  border: 2px solid #e31c25;
+  border-radius: 4px;
+  color: #e31c25;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #e31c25;
+    color: #fff;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.loadMoreTrigger {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.loadMoreLoader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.loadingText {
+  margin: 0;
+  color: #999;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.endMessage {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 20px;
+  color: #666;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+  }
+}
+
+@media (width <= 1024px) {
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width <= 768px) {
+  .container {
+    padding: 24px 16px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .productsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .searchResults {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .emptyState {
+    padding: 40px 20px;
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .manualLoadMore {
+    margin-top: 30px;
+  }
+
+  .loadMoreButton {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .loadMoreTrigger {
+    margin-top: 16px;
+  }
+
+  .loadingText {
+    font-size: 13px;
+  }
+
+  .endMessage {
+    padding: 30px 16px;
+    margin-top: 16px;
+
+    p {
+      font-size: 13px;
+    }
+  }
+}
