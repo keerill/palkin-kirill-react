@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Stack
 
-## Getting Started
+- Next.js 16 (App Router)
+- TypeScript
+- Zustand for state
+- Axios
+- SCSS modules
+- Prettier + ESLint + Stylelint
 
-First, run the development server:
+## Quick Start
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Login
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Use these test credentials:
 
-## Learn More
+- Username: `emilys`
+- Password: `emilyspass`
 
-To learn more about Next.js, take a look at the following resources:
+## Docker
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Build:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+docker build -t shop-app .
+```
 
-## Deploy on Vercel
+Run:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+docker run -p 3000:3000 shop-app
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Scripts
+
+- `npm run dev` - start development server
+- `npm run build` - build for production
+- `npm run start` - run production build
+- `npm run lint` - check code with eslint, tsc, and stylelint
+- `npm run format` - format code with prettier
+
+## Project Structure
+
+```
+src/
+├── app/              # pages and layouts
+├── components/       # React components
+├── services/         # API layer
+├── store/           # Zustand stores
+├── types/           # TypeScript definitions
+└── utils/           # helper functions
+```
+
+## Features
+
+- JWT auth with token refresh
+- Product listing and search
+- Infinite scroll
+- Responsive design
+- Loading states and error handling
