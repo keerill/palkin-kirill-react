@@ -1,3 +1,6 @@
+[![Live Demo](https://img.shields.io/badge/Live_Demo-black?style=for-the-badge&logo=vercel)](https://palkin-kirill-react.vercel.app)
+
+
 ## Stack
 
 - Next.js 16 (App Router)
